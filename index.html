@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index (1).css">
+    <style>
+        .tien{
+            position: absolute;left: 0px;top: 0px;
+        }
+        .tienroi{padding-left:15px;
+            font-size:18px;
+            line-height:24px;
+            position:fixed;
+            color:#ffffff;
+            user-select:none;
+            z-index:1000;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            -khtml-user-select:none;
+            -webkit-user-select:none;
+            -webkit-touch-callout:none;}
+            body{background-color: rgb(252, 255, 255);}
+            .tienroi:hover{cursor:default;}
+    </style>
+</head>
+<body>
+    <div class="tien">
+
+        <p class="tienroi">💵</p>
+        
+                </div>
+<script> 
+
+var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c)
+{this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;
+this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".tienroi");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+</script>
+    <div class="header">
+        <p>Bài KIỂM TRA HỌC KÌ 2:<br>
+           GIỚI THIỆU VỀ BẢN THÂN VÀ QUÊ HƯƠNG MÌNH SINH RA.
+        </p>
+    </div>
+    <div class="menu_kk"> 
+        <div class="menu">
+            <ul class="root">
+                <li><a href="" class="href"> Giới thiệu bản thân </a>
+                    <ul class="submenu">
+                        <li><a href="" class="href">Giới tính</a></li>
+                        <li><a href="" class="href">Tên</a></li>
+                        <li><a href="" class="href">Tuổi</a></li>
+                        <li><a href="" class="href">Nơi ở</a></li>
+                    </ul></li>
+                <li><a href="" class="href"> Học vấn </a>
+                    <ul class="submenu">
+                        <li><a href="" class="href">Tiểu học</a></li>
+                        <li><a href="" class="href">Trung học cơ sở</a></li>
+                        <li><a href="" class="href">Trung học phổ thông</a></li>
+                        <li><a href="" class="href">Đại học</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="href"> Sở thích </a>
+                    <ul class="submenu">
+                        <li><a href="">Thể Thao</a></li>
+                        <li><a href="">Nghệ thuật</a></li>
+                        <li><a href="">Phim ảnh</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="href"> liên hệ </a>
+                    <ul class="submenu">
+                        <li><a href="" class="href">Hotline</a></li>
+                        <li><a href="" class="href">Email</a></li>
+                        <li><a href="" class="href">Messenger</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="noidung">
+    <table class="bang" width="100%" height="250px" border="1">
+        <tr class="h1">
+            <td rowspan="2">
+                <a href="https://www.facebook.com/"><img src="Facebook.jpg" height="120px" width="120px"><br></a>
+                <a href="https://www.instagram.com/"><img src="Instagram.jpg" height="120px" width="120px"><br></a>
+                <a href="https://id.zalo.me/"><img src="Zalo.jpg" height="120px" width="120px"><br></a>
+                <a href="https://www.tiktok.com/"><img src="Tiktok.jpg" height="120px" width="120px"></a>
+            </td>
+            <td>
+                <a href=""><img src="anhdaidien.jpg" height="250px" width="250px"></a>
+                <p>Vũ Hải Đức<br>
+                    14/11/2003<br>
+                    Thành phố Hải Dương, tỉnh Hải Dương<br>
+                </p>
+            </td>
+            <td rowspan="2">
+                <a href="https://8xbet.cx/"><img src="8xbet.jpg" height="120px" width="120px"><br></a>
+                <a href="https://www.dainam.edu.vn/vi"><img src="anhlogodainam.jpg" height="120px" width="120px"><br></a>
+                <a href="https://play.google.com/store/apps/details?id=jp.konami.pesam&hl=vi&gl=US"><img src="Pes2023.jpg" height="120px" width="120px"><br></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    My name is Vũ Hải Đức, i'm 20 years old i was born in HaiDuong city but now i studying and living in HaNoi.
+                    Currently i am studying information technology, i am a freshman at DaiNam university
+                    I enjoy to play football with my friends after time at school. I happy with my life.
+                </p>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <footer class="ft" align="center">
+        <h3>TRƯỜNG ĐẠI HỌC ĐẠI NAM<br>
+            Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội<br>
+            Điện thoại: (024) 35577799<br>
+            Email: dnu@dainam.edu.vn
+        </h3>
+    </footer>
+</body>
+</html>
